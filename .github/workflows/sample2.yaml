@@ -1,0 +1,13 @@
+name: sample2 triggered
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'project2/sample2/**'
+      - '.github/workflows/**'
+jobs:
+  sample2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "sample2 triggered"
